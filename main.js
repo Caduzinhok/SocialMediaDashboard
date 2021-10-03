@@ -1,6 +1,7 @@
 const checkbox = document.getElementById('checkbox');
 const html = document.querySelector("html");
 const getStyle = (element,style) => window.getComputedStyle(element).getPropertyValue(style);
+
 const initialColors = {
     bg: getStyle(html,"--bg"),
     card: getStyle(html,"--card"),
@@ -9,6 +10,7 @@ const initialColors = {
     ligne: getStyle(html,"--ligne"),
     link: getStyle(html,"--link")
 }
+
 const darkMode = {
     bg: "#1e202a",
     card: "#252a41",
@@ -17,6 +19,7 @@ const darkMode = {
     ligne: "#63687e",
     link: "#ffffff"
 }
+
 const transformKey = key => "--" + key;
 const  changeColors = (colors) => {
     Object.keys(colors).map(key =>
